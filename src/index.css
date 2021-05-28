@@ -50,7 +50,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   color:white;
   margin-top: 3rem;
   text-align: center;
-  text-emphasis: left;
+  text-emphasis: left; 
 }
 .card-panel h2 {
   font-size: 1.6rem;
