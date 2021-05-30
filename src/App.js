@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Form from './components/Form';
 import API from './components/API';
 import Error from './components/Error';
+
+import {WEATHER_KEY} from './keyApi';
  
 function App() {
 
@@ -33,8 +35,7 @@ function App() {
         
         if (dataForm) {
             
-            const idAPI = '7ca43ca50003586d0301a08619bdcecd';
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=es&appid=${idAPI}`;
+            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=es&appid=${WEATHER_KEY}`;
 
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();

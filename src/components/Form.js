@@ -72,6 +72,8 @@ const Form = ({ form, setForm, setDataForm }) => {
                     <option value="ES">España</option>
                     <option value="PE">Perú</option>
                     <option value="US">Estados Unidos</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="BR">Brasil</option>
                 </select>
                 <label htmlFor="country">Pais</label>            
             </div>
