@@ -1,9 +1,10 @@
 import React,{ useState } from 'react';
+import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Form = ({ form, setForm, setDataForm }) => {
     
-    
-
+     
     // State Error
     const [error, setError] = useState(false)
     
@@ -38,14 +39,11 @@ const Form = ({ form, setForm, setDataForm }) => {
        
     }
     
-    console.log (city)
-    
+        
 
     return (
         <form onSubmit= {handleSubmit}>
-            {error ? <div className="error #e53935 red darken-1">Todos los Campos son Obligatorios</div> 
-                    : null
-            }
+            { ( error ) ? <Error mensaje="Todos los campos son obligatorios"/> : null}
             <div className="input-field col s12">
                 <input 
                     name="city" 
@@ -78,11 +76,17 @@ const Form = ({ form, setForm, setDataForm }) => {
                 <label htmlFor="country">Pais</label>            
             </div>
             
-            <button className="btn #01579b light-blue darken-4 waves-effect waves-red hoverable" type="submit" >Buscar Clima
+            <button className="btn-large btn-block #f9a825 yellow darken-3 waves-effect waves-red hoverable" type="submit" >Buscar Clima
                 <i className="material-icons right">cloud</i>
             </button>
         </form>    
     )
+}
+
+Form.propTypes = {
+    form: PropTypes.object.isRequired, 
+    setForm: PropTypes.func.isRequired, 
+    setDataForm: PropTypes.func.isRequired
 }
 
 export default Form

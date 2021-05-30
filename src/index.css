@@ -33,10 +33,13 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
 input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   color: white;
 }
-
+.header{
+  padding:2rem;
+}
 .contenedor-form {
   padding: 3rem 0 1px 0;
   background-color: #03a9f4;
+  height: 100vh;
 }
 .mensaje {
   text-align: center;
@@ -52,8 +55,9 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   text-align: center;
   text-emphasis: left; 
 }
+
 .card-panel h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: center;
 }
 .card-panel p {
@@ -61,19 +65,27 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   font-size: 1.4rem;
 }
 .temperatura {
-  font-size: 4rem!important
+  font-size: 4rem!important;
+  margin: 0 auto;
 }
 .temperatura span {
-  font-size: 2rem!important;
-  vertical-align: super;
+  font-size: 1.5rem!important;
+  vertical-align: super;  
 }
 
 .btn-block {
   display: block!important;
+  width: 100%;
 }
 
 .error {
   padding: 1rem!important;
   text-align: center!important;
   color: #FFF!important;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-panel{
+    margin-top: 2rem; /* Aplicará solo desde 0 hasta 600px */
+  }
 }
