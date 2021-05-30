@@ -35,7 +35,7 @@ function App() {
         
         if (dataForm) {
             
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=es&appid=${WEATHER_KEY}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=es&appid=${WEATHER_KEY}`;
 
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
