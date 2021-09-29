@@ -40,7 +40,8 @@ function App() {
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
             
-            setApiValue(resultado);            
+            setApiValue(resultado);   
+                  
             
 
             if(resultado.cod === "404"){

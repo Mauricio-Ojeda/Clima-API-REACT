@@ -6,7 +6,7 @@ const API = ({ apiValue }) => {
     // Destructuring apiValue
     const {cod, name, main, weather} = apiValue;
 
-    if(!cod){return null};
+    if(!cod || ( parseInt(cod, 10) > 400 )){return null};
 
     
     return (
